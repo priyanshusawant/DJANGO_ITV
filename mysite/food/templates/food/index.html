@@ -10,9 +10,10 @@
     {% block body %}
     
     <h1>This is an index page</h1>
-
+        
     {% for item in itemlist %}
 
+        <img width="150px" height="100px" src="{{ item.item_img }}">
         <ul>
             <li>
                 <a href="{% url 'food:detail' item.id %}">
