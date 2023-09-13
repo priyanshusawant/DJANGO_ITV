@@ -3,8 +3,12 @@ from django.db import models
 # Create your models here.
 
 class Item(models.Model):
+    prod_code = models.IntegerField(default=100)
+    for_user = models.CharField(max_length=100, default='xyz')
     item_name = models.CharField(max_length=  50)
-    Item_desc = models.CharField(max_length = 300)
+    Item_desc = models.CharField(max_length =500,
+        default = '''Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum exercitationem deserunt quidem vel magni saepe voluptates minima ab ex! Quam, quae atque nulla accusamus cum illum. Aliquam aspernatur modi ipsum?''' 
+        )
     item_price = models.IntegerField()
     item_img = models.CharField(
         max_length=500,
