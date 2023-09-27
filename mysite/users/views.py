@@ -70,3 +70,5 @@ def logout_view(request):
     return redirect('food:index')
 
 
+def profilepage(request):
+    return render(request, 'users/profile.html')
