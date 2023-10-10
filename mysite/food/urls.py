@@ -23,9 +23,12 @@ urlpatterns = [
 
 # function based create item view
 # -------------------------------------------------------------------------------------------------------------------------------------
+#    path('add/', views.create_item, name='create_item'),
 
-    path('add/', views.create_item, name='create_item'),
-    
+# class based create item view
+# -------------------------------------------------------------------------------------------------------------------------------------
+    path('add/', views.create_item, name='create_item' ),
+
 # function based update item view
 # -------------------------------------------------------------------------------------------------------------------------------------
     path('update/<int:id>/',views.update_item, name='update_item'),
