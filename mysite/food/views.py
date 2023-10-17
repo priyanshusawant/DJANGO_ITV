@@ -144,6 +144,16 @@ def delete_item(request, id):
     
     if request.method == 'POST':
         item.delete()
+
+        Obj_History = HISTORY(
+            user_name = request.user.username,
+            prod_ref = item.prod_code,
+            item_name = item.item_name,
+            op_type = 'Deleted'
+        )
+        print(1)
+        Obj_History.save()
+
         return redirect('food:index')
 
     return render(request, 'food/item-delete.html', context)
