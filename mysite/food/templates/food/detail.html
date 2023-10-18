@@ -57,7 +57,11 @@
             
         </div>
     </div>
-    
+
+    {% if user.is_authenticated %}
+
+        {% if user.profile.user_type == 'Rest' or user.profile.user_type == 'Admin' %}
+
     <br><br>
     {% for obj in hist %}
 
@@ -88,13 +92,16 @@
                     </div>
         </div>
 
-        <div class="col-md-2
-                    ">
+        <div class="col-md-2">
 
         </div>
     </div>
 
     {% endfor %}
+
+        {% endif %}
+
+    {% endif %}
 
     {% endblock %}
 </body>
