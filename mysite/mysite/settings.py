@@ -120,7 +120,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 LOGIN_URL = 'login'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'pictures')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 MEDIA_URL = 'pic/'
 
 # Default primary key field type
