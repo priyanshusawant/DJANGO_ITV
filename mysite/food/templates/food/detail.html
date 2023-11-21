@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<->
+
     {% block body %}
 
     <div class="row">
@@ -214,7 +214,7 @@
                             <div class="col-md-2 text-left">
                                 {% if obj.username == user.username %}
                                     <a class="btn btn-warning btn-sm"
-                                    href="#">
+                                    href="{% url 'users:upd_crf' item.id obj.id %}">
                                         Edit
                                     </a>
                                 {% endif %}
