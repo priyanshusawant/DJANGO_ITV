@@ -50,7 +50,7 @@ class IndexClassView(ListView):
 
 def detail(request, item_id):
     item = Item.objects.get(pk=item_id)
-
+    
     hist = HISTORY.objects.filter(
         prod_ref = item.prod_code
     )

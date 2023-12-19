@@ -223,7 +223,7 @@
                             <div class="col-md-2 text-left">
                                 {% if obj.username == user.username %}
                                     <a class="btn btn-primary btn-sm"
-                                    href="#">
+                                    href="{% url 'users:del_crf' item.id obj.id %}">
                                         Delete
                                     </a>
                                 {% endif %}
@@ -235,7 +235,14 @@
                 
             </div>
         </div>
-                
+
+        {% if user.profile.user_type == 'Cust' %}
+        <a
+            class="btn btn-primary btn-sm"
+            href="{% url 'users:buy' item.item_price obj.quantity %}">
+
+            Buy Now
+        </a>
         {% endfor %}
                 
             {% endif %}
